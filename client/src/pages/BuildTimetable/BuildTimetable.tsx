@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { scheduledEventToCalendarBlock } from "@/utils";
 import "./BuildTimetable.style.scss";
 
+
 function BuildTimetable() {
   const { jwt } = useAccountContext();
   const [scheduledEvents, setScheduledEvents] = useState<ScheduledEvent[]>([]);
@@ -24,11 +25,30 @@ function BuildTimetable() {
   };
 
   const createTimetable = async (name: string) => {
+
+    // const events = await prisma.scheduledEvent.findMany({
+    //   where: {
+    //     id: {
+    //       in: scheduledEventIds.map((id) => parseInt(id)),
+    //     },
+    //   },
+    // });
+
+    // console.log(events)
+
+
     const result = await ServiceAPI.createTimetable(
       name,
       selectedEvents.map((event) => event.id.toString()),
       jwt,
     );
+
+    if (result.isErr()) {
+      setErrorMessage(result.err().message); // Set error message if there is an error
+      return;
+    }
+
+
 
     navigate(`/timetables/${result.data.id}`);
   };

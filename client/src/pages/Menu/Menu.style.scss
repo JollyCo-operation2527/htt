@@ -131,3 +131,19 @@
     66.64%,79.3% {transform:translate3d(0,-50%,0);}
     83.3%,95.96% {transform:translate3d(0,-25%,0);}
   }
+
+
+  @media (max-width: 600px) {
+    .content {
+      width: 100%; /* Full width on small screens */
+     
+    }
+
+    .content__container__text,
+  .content__container__list__item {
+    font-size: 20px; /* Smaller font size on mobile */
+  }
+
+ 
+  }
+

@@ -20,3 +20,31 @@
     text-decoration: underline;
   }
 }
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .CabinetSection {
+    display: flex;
+    gap: 0.2rem;
+    img {
+      height: 1.5rem;
+    }
+  
+    li {
+      font-size: 30%;
+    }
+  
+    a {
+      text-decoration: none;
+      color: $theme--dark;
+    }
+  
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .cabinet-section__title{
+      
+    }
+  }
+}

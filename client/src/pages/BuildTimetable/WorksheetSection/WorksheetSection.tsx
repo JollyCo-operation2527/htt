@@ -97,8 +97,12 @@ function WorksheetSection({
 
   const handleCreateTimetable = () => {
     if (timetableName.trim()) {
+
+      
       createTimetable(timetableName); // Pass the name from state
       setTimetableName(""); // Clear the input field after submission
+      
+
     } else {
       alert("Please enter a timetable name.");
     }

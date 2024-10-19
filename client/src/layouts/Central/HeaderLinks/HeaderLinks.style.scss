@@ -22,3 +22,29 @@
     color: $theme--dark;
   }
 }
+
+@media (max-width: 600px){
+
+  .HeaderLinks {
+    margin: 0.5rem;
+    text-align: right;
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.6rem;
+    justify-content: left;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: black;
+    }
+  
+    a:hover {
+      text-decoration: underline;
+      color: $theme--dark;
+    }
+  
+    a:active {
+      color: $theme--dark;
+    }
+  }
+}
