@@ -34,6 +34,7 @@ const login = async (request: Request, response: Response) => {
   const result = await AuthenticationService.login(
     request.body.email,
     request.body.password,
+    
   );
 
   if (result.err) {
@@ -50,6 +51,9 @@ const login = async (request: Request, response: Response) => {
     statusCode: 200,
   });
 };
+
+
+
 
 const profile = async (request: Request, response: Response) => {
   const authenticationResult = await AuthorizationService.emailFromToken(

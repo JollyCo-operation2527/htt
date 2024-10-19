@@ -9,6 +9,14 @@ const seedAccounts = async () => {
     "password",
     "ADMIN",
   );
+
+  const admin2 = await AccountService.create(
+    "bruh@email.com",
+    "workplz",
+    "ADMIN",
+  );
+  const user2 = await AccountService.create("bruh@email.com", "workplz");
+
   const user = await AccountService.create("user@email.com", "password");
 };
 
