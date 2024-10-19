@@ -9,17 +9,18 @@
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    border-color: black;
+    border-color: #85c1f9;
 
     tr {
-      border: solid 2px #e0e0e0;
+      border: solid 2px #f8c0e3;
+      
     }
 
     td {
-      border: solid 2px #e0e0e0;
-      padding: 10px;
+      border: dotted 2px #f8c0e3;
+      padding: 15px;
       text-align: center;
-      height: 10px;
+      height: 15px;
     }
 
     th {
@@ -29,11 +30,14 @@
   }
 
   &__head {
-    background-color: #cccccc;
+    background-color: #bbe2ff;
+    text-transform: lowercase;
+    padding: 10px;
   }
 
   &__cell--event {
-    background-color: #cccccc;
+    background-color: #f8c0e3;
+    padding: 10px;
   }
 
   &__cell--time {
