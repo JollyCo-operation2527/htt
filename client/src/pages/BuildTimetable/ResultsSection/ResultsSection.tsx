@@ -8,6 +8,8 @@ interface ResultsSectionProps {
 
 function ResultsSection({ scheduledEvents, addEvent }: ResultsSectionProps) {
   return (
+    
+    
     <div className="ResultsSection">
       <div className="ResultsSection__topbar">
         <div className="ResultsSection__topbar__item ResultsSection__add"></div>
