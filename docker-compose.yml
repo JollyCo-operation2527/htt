@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  client:
+    build:
+      context: ./client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - service
+    environment:
+      - REACT_APP_API_URL=http://service:5000
+
+  service:
+    build:
+      context: ./service
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=your_database_url_here

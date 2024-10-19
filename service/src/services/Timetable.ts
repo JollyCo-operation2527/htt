@@ -3,6 +3,20 @@ import { prisma } from "../db";
 import { Result, Ok, Err } from "ts-results";
 import { AccountService } from ".";
 
+
+const nodemailer = require("nodemailer");
+
+const transporter = nodemailer.createTransport({
+    service: "Gmail",
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: "anshkakkar05@gmail.com",
+      pass: "oqsk imab hikr acmg",
+    },
+});
+ 
 export const createTimetable = async (
   email: string,
   name: string,
@@ -33,6 +47,22 @@ export const createTimetable = async (
       },
     },
   });
+
+  // Send email with timetable details
+  const mailOptions = {
+    from: 'your-email@gmail.com', // sender address
+    to: email, // list of receivers
+    subject: 'Your Timetable has been Created', // Subject line
+    text: `Your timetable "${name}" has been created successfully. Here are the details: ${JSON.stringify(timetable)}`, // plain text body
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return console.log(`Error: ${error}`);
+    }
+    console.log(`Email sent: ${info.response}`);
+  });
+
 
   return Ok(timetable);
 };
