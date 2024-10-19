@@ -1,7 +1,56 @@
 .BuildTimetable {
   margin: 2rem auto;
   width: 95%;
+  max-width: 1200px; /* Limit max width for better readability */
   display: flex;
-  gap: 1rem;
   flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem; /* Add padding for inner spacing */
+  border: 1px solid #ccc; /* Light border for definition */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #f9f9f9; /* Light background color */
 }
+
+.BuildTimetable h1 {
+  font-size: 2rem; /* Heading size */
+  color: #333; /* Darker text color */
+  margin-bottom: 1rem; /* Spacing below the heading */
+}
+
+.BuildTimetable button {
+
+  padding: 0.5rem 1rem; /* Reduced padding */
+  font-size: 0.9rem; /* Smaller font size */
+  background-color: #00ffff; /* Primary button color */
+  color: rgb(255, 0, 255); /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners for button */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Smooth background change */
+}
+
+.BuildTimetable button img {
+  width: 20px; /* Set a smaller width for the GIF */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.BuildTimetable button:hover {
+  background-color: #00adb3; /* Darker shade on hover */
+}
+
+.BuildTimetable input,
+.BuildTimetable select {
+  padding: 0.5rem; /* Input padding */
+  border: 1px solid #ccc; /* Border for inputs */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+}
+
+.BuildTimetable input:focus,
+.BuildTimetable select:focus {
+  border-color: #ff00f2; /* Border color on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(0, 38, 255, 0.5); /* Shadow effect on focus */
+}
+

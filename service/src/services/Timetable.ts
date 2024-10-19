@@ -4,6 +4,7 @@ import { Result, Ok, Err } from "ts-results";
 import { AccountService } from ".";
 
 
+<<<<<<< HEAD
 const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
@@ -17,6 +18,9 @@ const transporter = nodemailer.createTransport({
     },
 });
  
+=======
+
+>>>>>>> 09e35f17b731be4276c319647ff18e35908abbbd
 export const createTimetable = async (
   email: string,
   name: string,
@@ -48,6 +52,7 @@ export const createTimetable = async (
     },
   });
 
+<<<<<<< HEAD
   // Send email with timetable details
   const mailOptions = {
     from: 'your-email@gmail.com', // sender address
@@ -64,6 +69,9 @@ export const createTimetable = async (
   });
 
 
+=======
+  
+>>>>>>> 09e35f17b731be4276c319647ff18e35908abbbd
   return Ok(timetable);
 };
 
