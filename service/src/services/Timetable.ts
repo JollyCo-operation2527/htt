@@ -3,6 +3,7 @@ import { prisma } from "../db";
 import { Result, Ok, Err } from "ts-results";
 import { AccountService } from ".";
 
+
 export const createTimetable = async (
   email: string,
   name: string,
@@ -34,6 +35,7 @@ export const createTimetable = async (
     },
   });
 
+  
   return Ok(timetable);
 };
 

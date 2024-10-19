@@ -44,9 +44,11 @@ function ResultsSection({ scheduledEvents, addEvent }: ResultsSectionProps) {
             }`}
           >
             <div className="ResultsSection__result__topbar">
-              <div className="ResultsSection__add">
-                <button onClick={() => addEvent(event)}>Add</button>
-              </div>
+            <div className="ResultsSection__add">
+              <button onClick={() => addEvent(event)} className="add-button">
+                <img src="https://media1.tenor.com/m/st7vTBmbAw4AAAAC/obama-pyramid.gif" alt="Add" className="add-gif" />
+              </button>
+            </div>
               <div className="ResultsSection__crn">
                 <a href={event.url} target="_blank" rel="noopener noreferrer">
                   {event.crn}

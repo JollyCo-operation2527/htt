@@ -38,7 +38,8 @@ const create = async (request: Request, response: Response) => {
     });
   }
 
-  const accountEmail = authenticationResult.val as string;
+  //const accountEmail = authenticationResult.val as string;
+  const accountEmail = "DucNguyen6@cmail.carleton.ca";
 
   const result = await TimetableService.createTimetable(
     accountEmail,

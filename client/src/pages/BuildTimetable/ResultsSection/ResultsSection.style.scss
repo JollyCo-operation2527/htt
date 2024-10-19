@@ -1,4 +1,12 @@
 .ResultsSection {
+  background-image: url('https://media1.tenor.com/m/zBc1XhcbTSoAAAAC/nyan-cat-rainbow.gif'); /* Path to your GIF */
+  background-size: cover; /* Cover the entire section */
+  background-repeat: no-repeat; /* Prevent repeating */
+  background-position: center; /* Center the image */
+  color: #fff;
+}
+
+.ResultsSection {
   &__topbar {
     display: flex;
     align-items: center;
@@ -26,11 +34,17 @@
     }
 
     &--gray {
-      background: #dcdcdc;
+      background-image: url('https://cdn.pixabay.com/animation/2022/11/16/14/56/14-56-49-778_512.gif'); /* Path to your GIF */
+      background-size: cover; /* Ensure the GIF covers the entire area */
+      background-repeat: no-repeat; /* Prevent repeating */
+      background-position: center; /* Center the GIF */
     }
 
     &--light-gray {
-      background: #c0c0c0;
+      background-image: url('https://media1.tenor.com/m/pMhSj9NfCXsAAAAd/saul-goodman-better-call-saul.gif'); /* Path to your GIF */
+      background-size: cover; /* Ensure the GIF covers the entire area */
+      background-repeat: no-repeat; /* Prevent repeating */
+      background-position: center; /* Center the GIF */
     }
 
     &__content {
@@ -78,3 +92,4 @@
     width: 9rem;
   }
 }
+
