@@ -23,9 +23,9 @@ function BuildTimetable() {
     setScheduledEvents(result);
   };
 
-  const createTimetable = async () => {
+  const createTimetable = async (name: string) => {
     const result = await ServiceAPI.createTimetable(
-      new Date().toISOString(),
+      name,
       selectedEvents.map((event) => event.id.toString()),
       jwt,
     );
