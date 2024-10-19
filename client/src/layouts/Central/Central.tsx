@@ -22,9 +22,9 @@ function Central({ title, children }: Props) {
         <div className="Central__page__content">{children}</div>
         <Divider />
         <div className="Central__page__footer">
-          <div className="Central__page__footer__release">Release: 8.10.1</div>
+          <div className="Central__page__footer__release">Release: ME FROM THIS MORTAL PRISON</div>
           <div className="Central__page__footer__copyright">
-            © 2024 Ellucian Company L.P. and its affiliates.
+            © 2024 Big Bad Business LLC and its affiliates.
           </div>
         </div>
       </div>
